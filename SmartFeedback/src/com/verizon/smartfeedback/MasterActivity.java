@@ -48,7 +48,16 @@ public class MasterActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.master_activity);
-        getSupportFragmentManager().beginTransaction().add(android.R.id.content,new LikeFragment()).commit();
+        boolean paybill = false;
+        Intent intent = getIntent();
+        
+        String payBill = PreferenceManager.getInstance(this).getStringValue("paybill");
+        
+    	if(payBill!=null && payBill.equalsIgnoreCase("true"))
+    		getSupportFragmentManager().beginTransaction().add(android.R.id.content,new QuickPayFragment()).commit();
+        else
+        	getSupportFragmentManager().beginTransaction().add(android.R.id.content,new LikeFragment()).commit();
+        	
         
         context = getApplicationContext();
         

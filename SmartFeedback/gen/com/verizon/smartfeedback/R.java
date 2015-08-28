@@ -2024,10 +2024,13 @@ containing a value of this type.
         public static final int ideasfragment=0x7f020056;
         public static final int likefragment=0x7f020057;
         public static final int notification=0x7f020058;
-        public static final int powered_by_google_dark=0x7f020059;
-        public static final int powered_by_google_light=0x7f02005a;
-        public static final int start=0x7f02005b;
-        public static final int thanksfragment=0x7f02005c;
+        public static final int notification_bill=0x7f020059;
+        public static final int powered_by_google_dark=0x7f02005a;
+        public static final int powered_by_google_light=0x7f02005b;
+        public static final int quickpayfragment=0x7f02005c;
+        public static final int start=0x7f02005d;
+        public static final int successpayfragment=0x7f02005e;
+        public static final int thanksfragment=0x7f02005f;
     }
     public static final class id {
         public static final int action_bar=0x7f0b0042;
@@ -2043,7 +2046,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0b003f;
         public static final int action_mode_bar_stub=0x7f0b003e;
         public static final int action_mode_close_button=0x7f0b0031;
-        public static final int action_settings=0x7f0b0059;
+        public static final int action_settings=0x7f0b005a;
         public static final int activity_chooser_view_content=0x7f0b0032;
         public static final int always=0x7f0b0025;
         public static final int beginning=0x7f0b002c;
@@ -2051,6 +2054,7 @@ containing a value of this type.
         public static final int btn_finish=0x7f0b0053;
         public static final int btn_next=0x7f0b0057;
         public static final int btn_next_red=0x7f0b0050;
+        public static final int btn_quick_pay=0x7f0b0059;
         public static final int buyButton=0x7f0b0013;
         public static final int buy_now=0x7f0b0018;
         public static final int buy_with_google=0x7f0b0019;
@@ -2175,8 +2179,10 @@ containing a value of this type.
         public static final int ideas_fragment=0x7f030018;
         public static final int like_fragment=0x7f030019;
         public static final int master_activity=0x7f03001a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
-        public static final int thanks_fragment=0x7f03001c;
+        public static final int quickpay_fragment=0x7f03001b;
+        public static final int success_pay_fragment=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int thanks_fragment=0x7f03001e;
     }
     public static final class menu {
         public static final int master=0x7f0d0000;

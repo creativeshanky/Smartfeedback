@@ -8,11 +8,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationCompat.Action;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
@@ -67,25 +64,45 @@ public class GcmIntentService extends IntentService {
     private void sendNotification(String msg) {
         mNotificationManager = (NotificationManager)
                 this.getSystemService(Context.NOTIFICATION_SERVICE);
-
-        PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, MasterActivity.class), 0);
-
-        Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(),R.drawable.notification);
+        
+        
+        
+        int notificationDrawable;
+        String title,tag;
+        
+        Intent notificationIntent = new Intent(getApplicationContext(), MasterActivity.class);
+        
+        
+        if(msg.trim().equalsIgnoreCase("pay your bills")){
+        	notificationDrawable = R.drawable.notification_bill;
+        	title = "Pay your bills instantly";
+        	tag = "Pay your bills quickly with one tap right from your mobile";
+        	PreferenceManager.getInstance(this).putStringValue("paybill", "true");
+        }else{
+        	notificationDrawable = R.drawable.notification;
+        	title = "Verizon Feedback Survey";
+        	tag = "Voice your feedback and save 2$ on your next bill";
+        	PreferenceManager.getInstance(this).putStringValue("paybill", "false");
+        }
+        
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0,notificationIntent, 0);
+        
+        Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(),notificationDrawable);
         NotificationCompat.BigPictureStyle style = new NotificationCompat.BigPictureStyle();
-        style.setBigContentTitle("Verizon Feedback Survey");
+        style.setBigContentTitle(title);
         style.bigPicture(bitmap);
         
         
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
-        .setContentTitle("Verizon Feedback Survey")
+        .setContentTitle(title)
         .setStyle(style)
         .setAutoCancel(true)
         .setSmallIcon(R.drawable.ic_launcher)
-        .setContentText("Voice your feedback and save 2$ on your next bill");
+        .setContentText(tag);
 
         mBuilder.setContentIntent(contentIntent);
+        
         mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());        
     }
 }

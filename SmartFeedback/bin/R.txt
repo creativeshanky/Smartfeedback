@@ -432,10 +432,13 @@ int drawable ic_plusone_tall_off_client 0x7f020055
 int drawable ideasfragment 0x7f020056
 int drawable likefragment 0x7f020057
 int drawable notification 0x7f020058
-int drawable powered_by_google_dark 0x7f020059
-int drawable powered_by_google_light 0x7f02005a
-int drawable start 0x7f02005b
-int drawable thanksfragment 0x7f02005c
+int drawable notification_bill 0x7f020059
+int drawable powered_by_google_dark 0x7f02005a
+int drawable powered_by_google_light 0x7f02005b
+int drawable quickpayfragment 0x7f02005c
+int drawable start 0x7f02005d
+int drawable successpayfragment 0x7f02005e
+int drawable thanksfragment 0x7f02005f
 int id action_bar 0x7f0b0042
 int id action_bar_activity_content 0x7f0b0003
 int id action_bar_container 0x7f0b0041
@@ -449,7 +452,7 @@ int id action_menu_presenter 0x7f0b0006
 int id action_mode_bar 0x7f0b003f
 int id action_mode_bar_stub 0x7f0b003e
 int id action_mode_close_button 0x7f0b0031
-int id action_settings 0x7f0b0059
+int id action_settings 0x7f0b005a
 int id activity_chooser_view_content 0x7f0b0032
 int id always 0x7f0b0025
 int id beginning 0x7f0b002c
@@ -457,6 +460,7 @@ int id book_now 0x7f0b0017
 int id btn_finish 0x7f0b0053
 int id btn_next 0x7f0b0057
 int id btn_next_red 0x7f0b0050
+int id btn_quick_pay 0x7f0b0059
 int id buyButton 0x7f0b0013
 int id buy_now 0x7f0b0018
 int id buy_with_google 0x7f0b0019
@@ -555,8 +559,10 @@ int layout dislike_fragment 0x7f030017
 int layout ideas_fragment 0x7f030018
 int layout like_fragment 0x7f030019
 int layout master_activity 0x7f03001a
-int layout support_simple_spinner_dropdown_item 0x7f03001b
-int layout thanks_fragment 0x7f03001c
+int layout quickpay_fragment 0x7f03001b
+int layout success_pay_fragment 0x7f03001c
+int layout support_simple_spinner_dropdown_item 0x7f03001d
+int layout thanks_fragment 0x7f03001e
 int menu master 0x7f0d0000
 int string abc_action_bar_home_description 0x7f060024
 int string abc_action_bar_home_description_format 0x7f060028
